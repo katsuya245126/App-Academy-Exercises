@@ -3,7 +3,7 @@
 ## Projects and homework
 
 ### Previous exercises
-*[Previous exercises](Finished/previous_exercises)
+* [Previous exercises](Finished/previous_exercises)
 
 ### SOFTWARE ENGINEERING FOUNDATIONS
 * [Software engineering foundations](Finished/Software_engineering_foundations)
