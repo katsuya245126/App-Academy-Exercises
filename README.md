@@ -15,3 +15,6 @@
 * LRU Cache - N/A
 
 ### SQL
+* [SQL Fundamentals](Finished/SQL/SQL_fundamentals)
+* [Object Relational Model](Finished/SQL/Object_Relational_Model)
+* [Active_Record](Finished/SQL/Active_Record)
