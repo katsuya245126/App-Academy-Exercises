@@ -1,6 +1,6 @@
 # App Academy
 
-## Daily Coursework and Homework
+## Projects and homework
 
 ### RUBY
 * [hello](test)
