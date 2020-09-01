@@ -2,6 +2,12 @@
 
 ## Projects and homework
 
+### Previous exercises
+*[Previous exercises](Finished/previous_exercises)
+
+### SOFTWARE ENGINEERING FOUNDATIONS
+* [Software engineering foundations](Finished/Software_engineering_foundations)
+
 ### RUBY
 * [Enumerables and debugging](Finished/Ruby/Enumerables_and_Debugging)
 * [Reference](Finished/Ruby/Reference)
