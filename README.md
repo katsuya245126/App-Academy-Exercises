@@ -24,3 +24,4 @@
 * [SQL Fundamentals](Finished/SQL/SQL_fundamentals)
 * [Object Relational Model](Finished/SQL/Object_Relational_Model)
 * [Active Record](Finished/SQL/Active_Record)
+* [Active Record 2 ](Finished/SQL/Active_Record_2)
