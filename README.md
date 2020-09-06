@@ -26,3 +26,4 @@
 * [Active Record](Finished/SQL/Active_Record)
 	* [URLShortener](https://github.com/katsuya245126/URLShortener)
 * [Active Record 2 ](Finished/SQL/Active_Record_2)
+	* [Polls](https://github.com/katsuya245126/polls_app)
