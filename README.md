@@ -27,3 +27,4 @@
 	* [URLShortener](https://github.com/katsuya245126/URLShortener)
 * [Active Record 2 ](Finished/SQL/Active_Record_2)
 	* [Polls](https://github.com/katsuya245126/polls_app)
+* [Active Record under-the-hood ](Finished/SQL/AR_Under_the_Hood)
