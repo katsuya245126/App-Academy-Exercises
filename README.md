@@ -29,3 +29,7 @@
 	* [Polls](https://github.com/katsuya245126/polls_app)
 * [Active Record under-the-hood ](Finished/SQL/AR_Under_the_Hood)
 	* [Build active record](Finished/SQL/AR_Under_the_Hood/build_active_record)
+	
+### Rails
+* [Routes and Controllers](Finished/Rails/Routes_and_Controllers)
+	* [First Routes and and Controllers](Finished/Rails/Routes_and_Controllers/test_project)
