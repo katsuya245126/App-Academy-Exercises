@@ -34,3 +34,4 @@
 * [Routes and Controllers](Finished/Rails/Routes_and_Controllers)
 	* [First Routes and and Controllers](Finished/Rails/Routes_and_Controllers/test_project)
 	* [Art Share API](Finished/Rails/Routes_and_Controllers/art_share)
+	* [CSS Friends](Finished/Rails/Routes_and_Controllers/css_friends)
