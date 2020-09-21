@@ -1,0 +1,36 @@
+/* PHASE 2: Notifications */
+
+.badge {
+  display: inline;
+  background: black;
+  border-radius: 50%;
+  padding: 1px 6px;
+  font-size: 15px;
+}
+
+li:hover .badge {
+  background: red;
+}
+
+.header-notifications {
+  display: none;
+  position: absolute;
+  font-size: 15px;
+  background: black;
+  color: black;
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 3%;
+}
+
+li:hover .header-notifications {
+  display: block;
+}
+
+.header-notifications > li {
+  border-top: 1px solid lightgrey;
+}
+
+.header-notifications > li:hover {
+  background: lightgrey;
+}
