@@ -1,0 +1,20 @@
+<main>
+   <section class="cat-index-holder">
+
+      <nav class="nav">
+        <h1 class="index-title">All cats</h1>
+        <a href="<%= new_cat_url %>" class="index-new-cat">New Cat</a>
+      </nav>
+      <section class="cat-index">
+        <% Cat.all.pluck(:id, :name).each do |cat_id, cat_name| %>
+
+          <div class='card'>
+            <%= image_tag 'default_cat.jpg' %>
+            <h1><%= link_to cat_name, cat_url(cat_id) %></h1>
+          </div>
+
+        <% end %>
+
+      </section>
+   </section>
+</main>

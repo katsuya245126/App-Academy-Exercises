@@ -1,0 +1,49 @@
+<main>
+  <section class="show-page">
+    <div class="centered-box">
+      <%= image_tag 'default_cat.jpg' %>
+
+      <h1><%= @cat.name %></h1>
+
+      <table>
+        <tbody>
+          <tr>
+            <td>Age</td>
+            <td>about <%= @cat.age %> years old</td>
+          </tr>
+          <tr>
+            <td>Birth date</td>
+            <td><%= @cat.birth_date %></td>
+          </tr>
+          <tr>
+            <td>Color</td>
+            <td><%= @cat.color %></td>
+          </tr>
+          <tr>
+            <td>Sex</td>
+            <td><%= @cat.sex %></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>requests</h2>
+      <%= link_to "Make request", new_cat_rental_request_url %>
+      <table>
+
+        <thead>
+          <th>Start date</th>
+          <th>End date</th>
+          <th>Status</th>
+        </thead>
+
+        <tbody>
+          <% @cat.rental_requests.order('start_date').each do |request| %>
+            <%= render 'request', request: request %>
+          <% end %>  
+        </tbody>
+
+      </table>
+      <%= link_to "Home", cats_url %>
+    </div>
+  </section>
+</main>

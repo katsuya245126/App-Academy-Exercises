@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NinetynineCats</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav">
+
+        <h1 class="header-logo"><%= link_to "99 Cats", cats_url %></h1>
+        <ul class="header-user-options">
+          <li><a href="#">sign in</a></li>
+          <li><a href="#">sign up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <%= yield %>
+  </body>
+</html>

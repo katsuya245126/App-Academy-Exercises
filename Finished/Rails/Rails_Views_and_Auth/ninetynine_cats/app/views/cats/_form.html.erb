@@ -1,0 +1,28 @@
+<%= form_with(model: cat) do %>
+  <label for="cat_name">Name</label>
+  <input type="text" name="cat[name]" id="cat_name" value=<%= cat.name %>>
+
+  <label>Sex</label>
+  <label for="cat_sex_m">Male</label>
+  <input type="radio" name="cat[sex]" id="cat_sex_m" value="M" <%= 'checked' if cat.sex == 'M' %>>
+  <label for="cat_sex_f">Female</label>
+  <input type="radio" name="cat[sex]" id="cat_sex_f" value="F" <%= 'checked' if cat.sex == 'F' %>>
+
+  <label for="cat_birth_date">Birthdate</label>
+  <input type="date" name="cat[birth_date]" id="cat_birth_date" value=<%= cat.birth_date %>>
+
+  <label for="cat_color">Color</label>
+  <select name="cat[color]" id="cat_color">
+    <option <%= 'selected' if method == 'post' %> disabled>-- Pick a color --</option>
+    <option value="White" <%= 'selected' if cat.color == 'White' %>>White</option>
+    <option value="Black" <%= 'selected' if cat.color == 'Black' %>>Black</option>
+    <option value="Orange" <%= 'selected' if cat.color == 'Orange' %>>Orange</option>
+    <option value="Brown" <%= 'selected' if cat.color == 'Brown' %>>Brown</option>
+  </select>
+
+  <label for="cat_description">Description</label>
+
+  <textarea name="cat[description]" id="cat_description" cols="30" rows="10"><%= cat.description %></textarea>
+
+  <input type="submit" value="Submit">
+  <% end %>
