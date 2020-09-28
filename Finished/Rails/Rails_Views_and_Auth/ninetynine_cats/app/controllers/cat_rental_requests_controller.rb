@@ -10,8 +10,10 @@ class CatRentalRequestsController < ApplicationController
     if @cat_rental_request.save
       redirect_to cat_url(@cat_rental_request.cat)
     else
+      # tried using flash.now with render :new but it was not refreshing the page and the errors
+      # were not showing up. Had to resort to using flash with redirect_to
       flash[:errors] = @cat_rental_request.errors.full_messages
-      render :new
+      redirect_to new_cat_rental_request_url
     end
   end
 

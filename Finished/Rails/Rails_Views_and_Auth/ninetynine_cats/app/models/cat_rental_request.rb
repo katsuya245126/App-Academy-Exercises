@@ -3,8 +3,8 @@ class CatRentalRequest < ApplicationRecord
 
   validates :start_date, :end_date, :status, presence: true
   validates :status, inclusion: STATUS
-  validate :does_not_overlap_approved_request
-  validate :start_date_before_end_date
+  validate :does_not_overlap_approved_request, if: -> { start_date && end_date }
+  validate :start_date_before_end_date, if: -> { start_date && end_date }
 
   belongs_to :cat
 

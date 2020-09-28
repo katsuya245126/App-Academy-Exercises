@@ -12501,3 +12501,1283 @@ Processing by CatsController#show as HTML
 Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 2.5ms | Allocations: 6579)
 
 
+Started GET "/cats" for ::1 at 2020-09-28 15:03:50 +0900
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "cats"."id", "cats"."name" FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:9
+  Rendered cats/index.html.erb within layouts/application (Duration: 110.1ms | Allocations: 35530)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 147ms (Views: 130.6ms | ActiveRecord: 8.0ms | Allocations: 52426)
+
+
+Started GET "/cats/1" for ::1 at 2020-09-28 15:03:55 +0900
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (1.2ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:40
+  Rendered cats/_request.html.erb (Duration: 0.5ms | Allocations: 236)
+  Rendered cats/show.html.erb within layouts/application (Duration: 27.1ms | Allocations: 10629)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 28.1ms | ActiveRecord: 20.5ms | Allocations: 19922)
+
+
+Started GET "/cats" for ::1 at 2020-09-28 15:04:00 +0900
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "cats"."id", "cats"."name" FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:9
+  Rendered cats/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2282)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.4ms | Allocations: 6306)
+
+
+Started GET "/cats/new" for ::1 at 2020-09-28 15:04:02 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 2.3ms | Allocations: 575)
+  Rendered cats/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 5119)
+
+
+Started POST "/cats" for ::1 at 2020-09-28 15:04:27 +0900
+Processing by CatsController#create as JS
+  Parameters: {"authenticity_token"=>"j3CFJAPiSh+2Ce4Bkaj7Tiv5GLb+UwQbEeJ/lPoWEauiMSsfgqNqa469m/G+K7mKDLfJaKQMrRbV1xk0te+AkA==", "cat"=>{"name"=>"plpk", "sex"=>"M", "birth_date"=>"2020-10-10", "color"=>"Black", "description"=>""}}
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 0.6ms | Allocations: 193)
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 409)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 5908)
+
+
+Started GET "/cats/new" for ::1 at 2020-09-28 15:04:30 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 1.2ms | Allocations: 174)
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 238)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 4338)
+
+
+Started POST "/cats" for ::1 at 2020-09-28 15:04:35 +0900
+Processing by CatsController#create as JS
+  Parameters: {"authenticity_token"=>"vJdQTVJzLdHKnAzxGmIvFeLZttEvE+k98IAdtgWIO+ImoWqYEtuCGa2IkHcMhLKrjcs8wjUMHctuODy5CyAO7Q==", "cat"=>{"name"=>"", "birth_date"=>"", "color"=>"-- Pick a color --", "description"=>""}}
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 1.1ms | Allocations: 181)
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8117)
+
+
+Started POST "/cats" for ::1 at 2020-09-28 15:04:36 +0900
+Processing by CatsController#create as JS
+  Parameters: {"authenticity_token"=>"vJdQTVJzLdHKnAzxGmIvFeLZttEvE+k98IAdtgWIO+ImoWqYEtuCGa2IkHcMhLKrjcs8wjUMHctuODy5CyAO7Q==", "cat"=>{"name"=>"", "birth_date"=>"", "color"=>"-- Pick a color --", "description"=>""}}
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 1.2ms | Allocations: 181)
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 6783)
+
+
+Started POST "/cats" for ::1 at 2020-09-28 15:04:37 +0900
+Processing by CatsController#create as JS
+  Parameters: {"authenticity_token"=>"vJdQTVJzLdHKnAzxGmIvFeLZttEvE+k98IAdtgWIO+ImoWqYEtuCGa2IkHcMhLKrjcs8wjUMHctuODy5CyAO7Q==", "cat"=>{"name"=>"", "birth_date"=>"", "color"=>"-- Pick a color --", "description"=>""}}
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 2.0ms | Allocations: 181)
+  Rendered cats/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 249)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 6787)
+
+
+Started GET "/cats/new" for ::1 at 2020-09-28 15:05:39 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 26.0ms | Allocations: 5581)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 6727)
+
+
+
+ActionView::MissingTemplate - Missing partial cats/_errors, application/_errors with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/katsuya/Desktop/App-Academy-Assignments/Finished/Rails/Rails_Views_and_Auth/ninetynine_cats/app/views"
+  * "/home/katsuya/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.3/app/views"
+  * "/home/katsuya/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.3.3/app/views":
+  app/views/cats/new.html.erb:1
+  app/controllers/cats_controller.rb:15:in `new'
+
+Started POST "/__better_errors/d1fdf92aab05ee9c/variables" for ::1 at 2020-09-28 15:05:39 +0900
+Started GET "/cats/new" for ::1 at 2020-09-28 15:06:00 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2512)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3662)
+
+
+
+ActionView::MissingTemplate - Missing partial ../shared/_errors with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/katsuya/Desktop/App-Academy-Assignments/Finished/Rails/Rails_Views_and_Auth/ninetynine_cats/app/views"
+  * "/home/katsuya/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.3/app/views"
+  * "/home/katsuya/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.3.3/app/views":
+  app/views/cats/new.html.erb:1
+  app/controllers/cats_controller.rb:15:in `new'
+
+Started POST "/__better_errors/45a7dfa4c827df87/variables" for ::1 at 2020-09-28 15:06:00 +0900
+Started GET "/cats/new" for ::1 at 2020-09-28 15:06:01 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 2136)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2560)
+
+
+
+ActionView::MissingTemplate - Missing partial ../shared/_errors with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/katsuya/Desktop/App-Academy-Assignments/Finished/Rails/Rails_Views_and_Auth/ninetynine_cats/app/views"
+  * "/home/katsuya/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.3/app/views"
+  * "/home/katsuya/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.3.3/app/views":
+  app/views/cats/new.html.erb:1
+  app/controllers/cats_controller.rb:15:in `new'
+
+Started POST "/__better_errors/9fb9814517ada11d/variables" for ::1 at 2020-09-28 15:06:01 +0900
+Started GET "/cats/new" for ::1 at 2020-09-28 15:06:43 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2511)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms | Allocations: 3663)
+
+
+
+ActionView::MissingTemplate - Missing partial ../shared/_errors.html.erb with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}. Searched in:
+  * "/home/katsuya/Desktop/App-Academy-Assignments/Finished/Rails/Rails_Views_and_Auth/ninetynine_cats/app/views"
+  * "/home/katsuya/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actiontext-6.0.3.3/app/views"
+  * "/home/katsuya/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionmailbox-6.0.3.3/app/views":
+  app/views/cats/new.html.erb:1
+  app/controllers/cats_controller.rb:15:in `new'
+
+Started POST "/__better_errors/251858c2fa5e00f4/variables" for ::1 at 2020-09-28 15:06:43 +0900
+Started GET "/cats/new" for ::1 at 2020-09-28 15:08:28 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.5ms | Allocations: 181)
+  Rendered cats/_form.html.erb (Duration: 2.4ms | Allocations: 476)
+  Rendered cats/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1151)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms | Allocations: 6214)
+
+
+Started POST "/cats" for ::1 at 2020-09-28 15:08:32 +0900
+Processing by CatsController#create as JS
+  Parameters: {"authenticity_token"=>"kFlwb0H/QB+rpVJMA/oCH7qyM0iq6fRDosZLBnM6Bt4Kb0q6AVfv18yxzsoVHJ+h1aC5W7D2ALU8fmoJfZIz0Q==", "cat"=>{"name"=>"", "birth_date"=>"", "color"=>"-- Pick a color --", "description"=>""}}
+  Rendering cats/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered cats/_form.html.erb (Duration: 1.2ms | Allocations: 183)
+  Rendered cats/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 616)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 7308)
+
+
+Started GET "/cats/new" for ::1 at 2020-09-28 15:08:35 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered cats/_form.html.erb (Duration: 0.6ms | Allocations: 173)
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 316)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 4426)
+
+
+Started GET "/cats/new" for ::1 at 2020-09-28 15:08:36 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered cats/_form.html.erb (Duration: 1.0ms | Allocations: 173)
+  Rendered cats/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 316)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 4426)
+
+
+Started POST "/cats" for ::1 at 2020-09-28 15:08:44 +0900
+Processing by CatsController#create as JS
+  Parameters: {"authenticity_token"=>"y51idE+JpwcyLYQdeghRlKKIT5LfFXWM73fSLTJlz4xRq1ihDyEIz1U5GJts7swqzZrFgcUKgXpxz/MiPM36gw==", "cat"=>{"name"=>"d", "sex"=>"M", "birth_date"=>"2020-10-10", "color"=>"White", "description"=>""}}
+  Rendering cats/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered cats/_form.html.erb (Duration: 1.7ms | Allocations: 186)
+  Rendered cats/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 332)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 5516)
+
+
+Started POST "/cats" for ::1 at 2020-09-28 15:08:45 +0900
+Processing by CatsController#create as JS
+  Parameters: {"authenticity_token"=>"y51idE+JpwcyLYQdeghRlKKIT5LfFXWM73fSLTJlz4xRq1ihDyEIz1U5GJts7swqzZrFgcUKgXpxz/MiPM36gw==", "cat"=>{"name"=>"d", "sex"=>"M", "birth_date"=>"2020-10-10", "color"=>"White", "description"=>""}}
+  Rendering cats/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered cats/_form.html.erb (Duration: 0.9ms | Allocations: 186)
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 332)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 0.0ms | Allocations: 5516)
+
+
+Started GET "/cats/new" for ::1 at 2020-09-28 15:08:47 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered cats/_form.html.erb (Duration: 1.0ms | Allocations: 173)
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 316)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 4418)
+
+
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+Started GET "/cats" for ::1 at 2020-09-28 16:07:45 +0900
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "cats"."id", "cats"."name" FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:9
+  Rendered cats/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5904)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 23.2ms | ActiveRecord: 2.4ms | Allocations: 13148)
+
+
+Started GET "/cats/1" for ::1 at 2020-09-28 16:07:48 +0900
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (0.6ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:40
+  Rendered cats/_request.html.erb (Duration: 0.9ms | Allocations: 235)
+  Rendered cats/show.html.erb within layouts/application (Duration: 22.7ms | Allocations: 10475)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 25.1ms | ActiveRecord: 7.9ms | Allocations: 19789)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:07:50 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 181)
+  [1m[36mCat Load (1.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1566)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 1.9ms | Allocations: 6201)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:07:59 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"5OuUNEtTCTc4RSuHYwnlHf/29yMeTm71+hyxgxbey2V4uU5FxGhmv5+2aC1BejxR1+ft/VH94ztJIdgycIx5vQ==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-10-07", "end_date"=>"2020-10-06"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-10-07' OR start_date > '2020-10-06' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1151)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 10.0ms | ActiveRecord: 3.7ms | Allocations: 9940)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:08:00 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 24)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.4ms | Allocations: 5136)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:08:04 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mCat Load (2.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 2.2ms | Allocations: 5097)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:08:24 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"6p4z1dzg9PeI8bSN9itS8HQZIik+DMJbTRlee+LzMw5wqAkAnEhbP+/lKAvgzc9OGwuoOiQTNq3ToX907FsGAQ==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-29", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-29' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1011)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 12.3ms | ActiveRecord: 10.5ms | Allocations: 19323)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:08:26 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mCat Load (1.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 1.9ms | Allocations: 5109)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:08:28 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.3ms | Allocations: 19)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.4ms | Allocations: 5101)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:08:34 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"eigq9cD/gM1j2jDOKZGtz1mq3+76eOugHGbg6LM+oQbgHhAggFcvBQTOrEg/dzBxNrhV/eBnH1aC3sHnvZaUCQ==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-29", "end_date"=>"2020-09-21"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-29' OR start_date > '2020-09-21' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 8.8ms | ActiveRecord: 3.2ms | Allocations: 9202)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:08:35 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"eigq9cD/gM1j2jDOKZGtz1mq3+76eOugHGbg6LM+oQbgHhAggFcvBQTOrEg/dzBxNrhV/eBnH1aC3sHnvZaUCQ==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-29", "end_date"=>"2020-09-21"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-29' OR start_date > '2020-09-21' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 18.3ms | ActiveRecord: 3.0ms | Allocations: 9189)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:08:35 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"eigq9cD/gM1j2jDOKZGtz1mq3+76eOugHGbg6LM+oQbgHhAggFcvBQTOrEg/dzBxNrhV/eBnH1aC3sHnvZaUCQ==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-29", "end_date"=>"2020-09-21"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-29' OR start_date > '2020-09-21' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 10.1ms | ActiveRecord: 2.3ms | Allocations: 9190)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:08:35 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"eigq9cD/gM1j2jDOKZGtz1mq3+76eOugHGbg6LM+oQbgHhAggFcvBQTOrEg/dzBxNrhV/eBnH1aC3sHnvZaUCQ==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-29", "end_date"=>"2020-09-21"}, "commit"=>"Submit"}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-29' OR start_date > '2020-09-21' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 20.7ms | ActiveRecord: 4.0ms | Allocations: 9207)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:08:36 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1004)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.8ms | Allocations: 5110)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:09:11 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"twUsBPvuvFFEyhJ7NW/gE1JnCGU1bmEd0C52krSJKnQtMxbRu0YTmSPejv0jiX2tPXWCdi9xletOlleduiEfew==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-22", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-22' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.6ms | Allocations: 166)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1556)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 16.2ms | ActiveRecord: 3.4ms | Allocations: 10727)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:09:12 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"twUsBPvuvFFEyhJ7NW/gE1JnCGU1bmEd0C52krSJKnQtMxbRu0YTmSPejv0jiX2tPXWCdi9xletOlleduiEfew==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-22", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-22' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1002)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 11.5ms | ActiveRecord: 3.1ms | Allocations: 9196)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:09:12 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"twUsBPvuvFFEyhJ7NW/gE1JnCGU1bmEd0C52krSJKnQtMxbRu0YTmSPejv0jiX2tPXWCdi9xletOlleduiEfew==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-22", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-22' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 17.2ms | ActiveRecord: 2.7ms | Allocations: 9177)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:09:12 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"twUsBPvuvFFEyhJ7NW/gE1JnCGU1bmEd0C52krSJKnQtMxbRu0YTmSPejv0jiX2tPXWCdi9xletOlleduiEfew==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-22", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-22' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 18.1ms | ActiveRecord: 3.6ms | Allocations: 9196)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:09:13 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 20)
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 21.7ms | ActiveRecord: 0.7ms | Allocations: 5329)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:09:14 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1005)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.9ms | Allocations: 5123)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:09:51 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"3AsA3Iph4J1Af81bUEmJ7F3no77e/kE444/YKZpILLhGPToJyslPVSdrUd1GrxRSMvUprcThtc59N/kmlOAZtw==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.5ms | Allocations: 169)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1559)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 12.2ms | ActiveRecord: 2.4ms | Allocations: 10719)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:09:53 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"3AsA3Iph4J1Af81bUEmJ7F3no77e/kE444/YKZpILLhGPToJyslPVSdrUd1GrxRSMvUprcThtc59N/kmlOAZtw==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1002)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 9.2ms | ActiveRecord: 2.7ms | Allocations: 9186)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:09:53 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"3AsA3Iph4J1Af81bUEmJ7F3no77e/kE444/YKZpILLhGPToJyslPVSdrUd1GrxRSMvUprcThtc59N/kmlOAZtw==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (1.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 17.2ms | ActiveRecord: 4.3ms | Allocations: 9179)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:09:53 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"3AsA3Iph4J1Af81bUEmJ7F3no77e/kE444/YKZpILLhGPToJyslPVSdrUd1GrxRSMvUprcThtc59N/kmlOAZtw==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (6.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 27.4ms | ActiveRecord: 9.4ms | Allocations: 9181)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:09:53 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"3AsA3Iph4J1Af81bUEmJ7F3no77e/kE444/YKZpILLhGPToJyslPVSdrUd1GrxRSMvUprcThtc59N/kmlOAZtw==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.0ms | Allocations: 13)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1001)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 13.0ms | ActiveRecord: 1.6ms | Allocations: 9214)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:09:55 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 20)
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1113)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.8ms | Allocations: 5328)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:12:41 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.1ms | Allocations: 175)
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1537)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.8ms | Allocations: 6572)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:12:56 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"zZx4kTFunMF+RB1HDcJzU4In7Q5yDXwvo18JENsC4rlXqkJEccYzCRlQgcEbJO7t7TVnHWgSiNk95ygf1arXtg==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 13)
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 12.0ms | ActiveRecord: 2.9ms | Allocations: 9482)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:12:58 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"zZx4kTFunMF+RB1HDcJzU4In7Q5yDXwvo18JENsC4rlXqkJEccYzCRlQgcEbJO7t7TVnHWgSiNk95ygf1arXtg==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1007)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 10.8ms | ActiveRecord: 4.0ms | Allocations: 9197)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:12:59 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"zZx4kTFunMF+RB1HDcJzU4In7Q5yDXwvo18JENsC4rlXqkJEccYzCRlQgcEbJO7t7TVnHWgSiNk95ygf1arXtg==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1007)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 13.9ms | ActiveRecord: 2.8ms | Allocations: 9215)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:13:06 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"zZx4kTFunMF+RB1HDcJzU4In7Q5yDXwvo18JENsC4rlXqkJEccYzCRlQgcEbJO7t7TVnHWgSiNk95ygf1arXtg==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1007)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 19.3ms | ActiveRecord: 3.1ms | Allocations: 9214)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:13:45 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.5ms | Allocations: 175)
+  [1m[36mCat Load (2.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1539)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 21.9ms | ActiveRecord: 2.9ms | Allocations: 6579)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:13:59 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"h8QA7MSp3PUrRU1XHBgqLes9jqQUehfjHjlZP7o/xXod8jo5hAFzPUxR0dEK/reThC8Etw5l4xWAgXgwtJfwdQ==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (3.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 10.3ms | ActiveRecord: 5.7ms | Allocations: 9503)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:14:07 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.7ms | Allocations: 175)
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 31.1ms | Allocations: 5782)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 6919)
+
+
+
+NoMethodError - undefined method `all' for #<ActionDispatch::Flash::FlashNow:0x000055e2133ef940>:
+  app/views/cat_rental_requests/new.html.erb:2
+  app/controllers/cat_rental_requests_controller.rb:4:in `new'
+
+Started POST "/__better_errors/1bcbd83dcac174b3/variables" for ::1 at 2020-09-28 16:14:08 +0900
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:14:15 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.1ms | Allocations: 175)
+  [1m[36mCat Load (4.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1536)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 33.5ms | ActiveRecord: 4.8ms | Allocations: 6596)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:14:23 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"fq7w0nhpnFOk2DLlzfo684BytxFErJJ04xy56blyhs/kmMoHOMEzm8PMrmPbHKdN72A9Al6zZoJ9pJjmt9qzwA==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 8.9ms | ActiveRecord: 4.6ms | Allocations: 9516)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:14:24 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"fq7w0nhpnFOk2DLlzfo684BytxFErJJ04xy56blyhs/kmMoHOMEzm8PMrmPbHKdN72A9Al6zZoJ9pJjmt9qzwA==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (2.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1007)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 30.8ms | ActiveRecord: 8.9ms | Allocations: 9218)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:15:46 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.8ms | Allocations: 174)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 20.1ms | Allocations: 6570)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 27.8ms | ActiveRecord: 5.6ms | Allocations: 14912)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:15:56 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 9.2ms | Allocations: 174)
+  [1m[36mCat Load (2.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 24.1ms | Allocations: 1531)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 58.9ms | ActiveRecord: 2.0ms | Allocations: 6567)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:16:03 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"dDyOLKE/GFaGQoSUD8tjmjvmz/VgWt0qod0iBAk0R4buCrT54Ze3nuFWGBIZLf4kVPRF5npFKdw/ZQMLB5xyiQ==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (5.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 53ms (Views: 20.3ms | ActiveRecord: 7.1ms | Allocations: 11081)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:16:05 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 24)
+  [1m[36mCat Load (3.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:9
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1015)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 26.5ms | ActiveRecord: 3.1ms | Allocations: 5116)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:16:47 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 2.0ms | Allocations: 167)
+  [1m[36mCat Load (5.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 19.5ms | Allocations: 1511)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 35.2ms | ActiveRecord: 5.0ms | Allocations: 6557)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:16:53 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"tYhvUTNXchYBTpFeQsYXQLhJfziamU0qIhPp5Ts2W34vvlWEc//d3mZaDdhUIIr+11v1K4CGudy8q8jqNZ5ucQ==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-10-07", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-10-07' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 13)
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1151)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 21.1ms | ActiveRecord: 2.9ms | Allocations: 9482)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:16:55 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 24)
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1009)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.7ms | Allocations: 5134)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:17:08 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.7ms | Allocations: 165)
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 32.7ms | Allocations: 6555)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 34.9ms | ActiveRecord: 10.9ms | Allocations: 14930)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:17:14 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"+RuWVDcH3HyntRS/2nrts1uedm9Dnfx8FYDPc2ydpL5jLayBd69ztMChiDnMnHANNIz8fFmCCIqLOO58YjWRsQ==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+Redirected to 
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 3.6ms | Allocations: 106079)
+
+
+
+NoMethodError - undefined method `new_url' for #<CatRentalRequestsController:0x00007f296c4549e8>
+Did you mean?  new_cat_url:
+  app/controllers/cat_rental_requests_controller.rb:14:in `create'
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:17:37 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 19)
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 21.2ms | Allocations: 6043)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 32.4ms | ActiveRecord: 11.2ms | Allocations: 13635)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:17:43 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"j1teM4JzqcJWWehHOKB+1Qw/QlaQa/F36QKVuAHHzR0VbWTmwtsGCjFNdMEuRuNrYy3IRYp0BYF3urS3D2/4Eg==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+Redirected to http://localhost:3000/cats/new
+Completed 200 OK in 22ms (ActiveRecord: 4.4ms | Allocations: 6100)
+
+
+Started GET "/cats/new" for ::1 at 2020-09-28 16:17:43 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 1.1ms | Allocations: 171)
+  Rendered cats/_form.html.erb (Duration: 5.1ms | Allocations: 554)
+  Rendered cats/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1227)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 5885)
+
+
+Started GET "/cats/new" for ::1 at 2020-09-28 16:18:05 +0900
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  Rendered cats/_form.html.erb (Duration: 0.6ms | Allocations: 237)
+  Rendered cats/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 380)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 7.0ms | ActiveRecord: 4.4ms | Allocations: 9786)
+
+
+Started GET "/cats/1" for ::1 at 2020-09-28 16:18:06 +0900
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:8:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mCatRentalRequest Load (1.8ms)[0m  [1m[34mSELECT "cat_rental_requests".* FROM "cat_rental_requests" WHERE "cat_rental_requests"."cat_id" = $1 ORDER BY start_date[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:40
+  Rendered cats/_request.html.erb (Duration: 1.0ms | Allocations: 227)
+  Rendered cats/show.html.erb within layouts/application (Duration: 36.8ms | Allocations: 8173)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 37.8ms | ActiveRecord: 9.3ms | Allocations: 12940)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:18:09 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mCat Load (1.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1012)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 1.3ms | Allocations: 5220)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:18:15 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"9gS4BKw0lS04qxNl6zPP1boZrCGVtuZtsupnBCR2J/5qVmJ1Iw/6pZ9YUM/JQBaZkgi2/9oFa6MB1w61QiSVJg==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+Completed 500 Internal Server Error in 199ms (ActiveRecord: 2.2ms | Allocations: 117616)
+
+
+
+NameError - undefined local variable or method `new_cat_request_url' for #<CatRentalRequestsController:0x00007f29642fb068>
+Did you mean?  new_cat_rental_request_url:
+  app/controllers/cat_rental_requests_controller.rb:14:in `create'
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:18:54 +0900
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.4ms | Allocations: 176)
+  [1m[36mCat Load (1.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 29.4ms | Allocations: 7417)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 50.0ms | ActiveRecord: 12.9ms | Allocations: 20139)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:18:55 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1005)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 1.2ms | Allocations: 5114)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:19:02 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"LzmW/gVoAAdWC/cgSQ1nqz/LPaYzenS7jfura1RpeRC1D6wrRcCvzzEfa6Zf6/oVUNm3tSllgE0TQ4pkWsFMHw==", "cat_rental_request"=>{"cat_id"=>"1", "start_date"=>"2020-09-30", "end_date"=>"2020-09-01"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCatRentalRequest Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "cat_rental_requests" WHERE "cat_rental_requests"."id" IS NOT NULL AND "cat_rental_requests"."cat_id" = $1 AND NOT (end_date < '2020-09-30' OR start_date > '2020-09-01' ) AND (status = 'APPROVED') LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 1]]
+  ↳ app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+Redirected to http://localhost:3000/cat_rental_requests/new
+Completed 200 OK in 21ms (ActiveRecord: 3.2ms | Allocations: 7698)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:19:02 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 24)
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1010)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.5ms | Allocations: 5137)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:21:00 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.3ms | Allocations: 176)
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 20.6ms | Allocations: 7417)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 33.6ms | ActiveRecord: 16.2ms | Allocations: 20147)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:21:02 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"MvDkEOJaCVFpUrGiznxOGdtwPCJg2/IvjBzQsHPCiKqoxt7FovKmmQ5GLSTYmtOntGK2MXrEBtkSpPG/fWq9pQ==", "cat_rental_request"=>{"cat_id"=>"-- Select a cat --", "start_date"=>"", "end_date"=>""}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 4243)
+
+
+
+NoMethodError - undefined method `to_date' for nil:NilClass
+Did you mean?  to_d:
+  app/models/cat_rental_request.rb:46:in `overlapping_requests'
+  app/models/cat_rental_request.rb:50:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:10:in `create'
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:21:05 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mCat Load (2.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1018)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 2.5ms | Allocations: 5124)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:21:06 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"XTcEgKzQOiQPoka+Y2o29aPNDgDoYG8DcK7Xt2GPr7THAT5V7HiV7Gi22jh1jKtLzN+EE/J/m/XuFva4byeauw==", "cat_rental_request"=>{"cat_id"=>"-- Select a cat --", "start_date"=>"", "end_date"=>""}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 2779)
+
+
+
+NoMethodError - undefined method `to_date' for nil:NilClass
+Did you mean?  to_d:
+  app/models/cat_rental_request.rb:46:in `overlapping_requests'
+  app/models/cat_rental_request.rb:50:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:10:in `create'
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:25:34 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mCat Load (2.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 19.0ms | Allocations: 6050)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 25.9ms | ActiveRecord: 12.6ms | Allocations: 13808)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:25:35 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"9ApIMzOHiyCwWF5evI4DTWcOFkPdKZmjStF7y9IDbIhuPHLmcy8k6NdMwtiqaJ7zCBycUMc2bVXUaVrE3KtZhw==", "cat_rental_request"=>{"cat_id"=>"-- Select a cat --", "start_date"=>"", "end_date"=>""}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2979)
+
+
+
+NoMethodError - undefined method `to_date' for nil:NilClass
+Did you mean?  to_d:
+  app/models/cat_rental_request.rb:46:in `overlapping_requests'
+  app/models/cat_rental_request.rb:50:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:10:in `create'
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:25:47 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.3ms | Allocations: 176)
+  [1m[36mCat Load (1.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 7417)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 31.8ms | ActiveRecord: 10.3ms | Allocations: 20148)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:25:49 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1016)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.5ms | Allocations: 5126)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:25:52 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"ix2xd9beRRmoKZcV4KN8iMAnVEr8MmL+oaXfebRTEF8RK4uilnbq0c89C5P2ReE2rzXeWeYtlgg/Hf52uvslUA==", "cat_rental_request"=>{"cat_id"=>"-- Select a cat --", "start_date"=>"", "end_date"=>""}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 4262)
+
+
+
+NoMethodError - undefined method `to_date' for nil:NilClass
+Did you mean?  to_d:
+  app/models/cat_rental_request.rb:46:in `overlapping_requests'
+  app/models/cat_rental_request.rb:50:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:10:in `create'
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:26:09 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.2ms | Allocations: 19)
+  [1m[36mCat Load (3.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 28.6ms | Allocations: 6050)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 29.7ms | ActiveRecord: 14.9ms | Allocations: 13787)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:26:10 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"uAjYKsVHjlG8frKxlntei9cRK7YyBdiTXfdyRWkF7RYiPuL/he8hmdtqLjeAncM1uAOhpSgaLGXDT1NKZ63YGQ==", "cat_rental_request"=>{"cat_id"=>"-- Select a cat --", "start_date"=>"", "end_date"=>""}, "commit"=>"Submit"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2992)
+
+
+
+NoMethodError - undefined method `to_date' for nil:NilClass
+Did you mean?  to_d:
+  app/models/cat_rental_request.rb:46:in `overlapping_requests'
+  app/models/cat_rental_request.rb:50:in `overlapping_approved_requests'
+  app/models/cat_rental_request.rb:61:in `does_not_overlap_approved_request'
+  app/controllers/cat_rental_requests_controller.rb:10:in `create'
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:26:22 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 19)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 6044)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 25.4ms | ActiveRecord: 9.8ms | Allocations: 13774)
+
+
+Started POST "/cat_rental_requests" for ::1 at 2020-09-28 16:26:23 +0900
+Processing by CatRentalRequestsController#create as JS
+  Parameters: {"authenticity_token"=>"8RKUcs+E/Gn69dafe2mn/nHQm1hlQeONIwvDFfF1P3JrJK6njyxToZ3hShltjzpAHsIRS39eF3u9s+Ia/90KfQ==", "cat_rental_request"=>{"cat_id"=>"-- Select a cat --", "start_date"=>"", "end_date"=>""}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/cat_rental_requests_controller.rb:10:in `create'
+Redirected to http://localhost:3000/cat_rental_requests/new
+Completed 200 OK in 22ms (ActiveRecord: 1.7ms | Allocations: 8399)
+
+
+Started GET "/cat_rental_requests/new" for ::1 at 2020-09-28 16:26:23 +0900
+Processing by CatRentalRequestsController#new as HTML
+  Rendering cat_rental_requests/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (Duration: 0.1ms | Allocations: 25)
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cat_rental_requests/new.html.erb:8
+  Rendered cat_rental_requests/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1010)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 5140)
+
+
