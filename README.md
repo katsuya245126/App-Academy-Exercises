@@ -38,3 +38,5 @@
 * [Rails views and auth](Finished/Rails/Rails_Views_and_Auth)
 	* [Rails Auth](Finished/Rails/Rails_Views_and_Auth/rails_auth)
 	* [99 Cats](Finished/Rails/Rails_Views_and_Auth/ninetynine_cats)
+* [Rails Auth 2](Finished/Rails/Rails_Auth_2)
+	* [Helpers, Layouts, and Partials](Finished/Rails/Rails_Auth_2/helpers_layouts_and_partials)
