@@ -22,7 +22,11 @@
 
 ### SQL
 * [SQL Fundamentals](Finished/SQL/SQL_fundamentals)
+	* [SQL Zoo](Finished/SQL/SQL_fundamentals/sql_zoo)
 * [Object Relational Model](Finished/SQL/Object_Relational_Model)
+	* [Plays-Playwrights ORM](Finished/SQL/Object_Relational_Model/plays_playwrights_orm)
+	* [Shakshuka part 2](Finished/SQL/Object_Relational_Model/shakshuka_part2)
+	* [AA Questions](Finished/SQL/Object_Relational_Model/aa_questions)
 * [Active Record](Finished/SQL/Active_Record)
 	* [URLShortener](https://github.com/katsuya245126/URLShortener)
 * [Active Record 2 ](Finished/SQL/Active_Record_2)
