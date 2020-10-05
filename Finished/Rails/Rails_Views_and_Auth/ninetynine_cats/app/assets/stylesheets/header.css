@@ -23,7 +23,7 @@
   display: flex;
 }
 
-.header-user-options a, .header-logo a {
+.header-user-options a, .header-user-options h1, .header-logo a {
   color: yellow;
   padding: 0 10px;
   text-decoration: none;

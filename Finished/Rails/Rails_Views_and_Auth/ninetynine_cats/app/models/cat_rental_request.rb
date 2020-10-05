@@ -7,6 +7,7 @@ class CatRentalRequest < ApplicationRecord
   validate :start_date_before_end_date, if: -> { start_date && end_date }
 
   belongs_to :cat
+  belongs_to :requester, class_name: 'User', foreign_key: 'user_id'
 
   def approved?
     status == 'APPROVED'

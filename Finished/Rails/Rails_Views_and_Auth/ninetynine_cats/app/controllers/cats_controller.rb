@@ -1,11 +1,13 @@
 class CatsController < ApplicationController
+  before_action :require_user!, only: [:new, :create, :edit, :update]
+
   def index
     @cats = Cat.all
     render :index
   end
 
   def show
-    @cat = Cat.find_by(id: params[:id])
+    @cat = Cat.find(params[:id])
 
     render :show
   end
@@ -16,7 +18,7 @@ class CatsController < ApplicationController
   end
 
   def create
-    @cat = Cat.new(cat_params)
+    @cat = current_user.cats.new(cat_params)
 
     if @cat.save
       redirect_to cat_url(@cat)
@@ -26,12 +28,12 @@ class CatsController < ApplicationController
   end
 
   def edit
-    @cat = Cat.find_by(id: params[:id])
+    @cat = current_user.cats.find(params[:id])
     render :edit
   end
 
   def update
-    @cat = Cat.find_by(id: params[:id])
+    @cat = current_user.cats.find(params[:id])
 
     if @cat.update_attributes(cat_params)
       redirect_to cat_url(@cat)

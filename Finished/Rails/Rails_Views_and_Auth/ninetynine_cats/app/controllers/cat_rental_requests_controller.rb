@@ -1,4 +1,7 @@
 class CatRentalRequestsController < ApplicationController
+  before_action :require_user!, only: [:approve, :deny]
+  before_action :require_cat_ownership!, only: [:approve, :deny]
+
   def new
     @cat_rental_request = CatRentalRequest.new
     render :new
@@ -6,6 +9,7 @@ class CatRentalRequestsController < ApplicationController
 
   def create
     @cat_rental_request = CatRentalRequest.new(cat_rental_request_params)
+    @cat_rental_request.user_id = current_user.id
 
     if @cat_rental_request.save
       redirect_to cat_url(@cat_rental_request.cat)
@@ -39,5 +43,11 @@ class CatRentalRequestsController < ApplicationController
 
   def current_cat
     current_cat_rental_request.cat
+  end
+
+  def require_cat_ownership!
+    return if current_user.owns_cat?(current_cat)
+
+    redirect_to cat_url(current_cat)
   end
 end

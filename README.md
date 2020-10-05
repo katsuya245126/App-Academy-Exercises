@@ -35,3 +35,6 @@
 	* [First Routes and and Controllers](Finished/Rails/Routes_and_Controllers/test_project)
 	* [Art Share API](Finished/Rails/Routes_and_Controllers/art_share)
 	* [CSS Friends](Finished/Rails/Routes_and_Controllers/css_friends)
+* [Rails views and auth](Finished/Rails/Rails_Views_and_Auth)
+	* [Rails Auth](Finished/Rails/Rails_Views_and_Auth/rails_auth)
+	* [99 Cats](Finished/Rails/Rails_Views_and_Auth/ninetynine_cats)

@@ -7,6 +7,7 @@ class Cat < ApplicationRecord
   validate :validate_past_date, if: :birth_date_present?
 
   has_many :rental_requests, class_name: 'CatRentalRequest', dependent: :destroy
+  belongs_to :owner, class_name: 'User', foreign_key: 'user_id'
 
   def age
     ((Time.current - Time.parse(birth_date.to_s)) / 1.year).round
