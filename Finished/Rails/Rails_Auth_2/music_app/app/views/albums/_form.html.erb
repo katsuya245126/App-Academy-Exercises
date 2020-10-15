@@ -1,0 +1,44 @@
+<% if flash[:errors] %>
+  <%= render './errors/errors' %>
+<% end %>
+
+<%= form_with model: @album, class: 'form' do |f| %>
+  <%= auth_token %>
+  
+  <p>
+    <label for="album-band">Band</label>
+    <select name="album[band_id]" id="album-band">
+
+      <% Band.all.each do |band| %>
+
+        <option value="<%= band.id %>" <%= 'selected' if @album.band_id == band.id %>>
+
+          <%= band.name %>
+
+        </option>
+
+      <% end %>
+
+    </select>
+  <p>
+
+  <p>
+    <label for="album-title">Title</label>
+    <input type="text" name="album[title]" id="album-title" value="<%= @album.title %>">
+  </p>
+
+  <p>
+    <label for="album-year">Year</label>
+    <input type="number" name="album[year]" id="album-year" value="<%= @album.year%>">
+  </p>
+
+  <p>
+    <label for="album-live-t">Live</label>
+    <input type="radio" name="album[live]" id="album-live-t" <%= 'checked' if @album.live %>>
+
+    <label for="album-live-f">Studio</label>
+    <input type="radio" name="album[live]" id="album-live-f" <%= 'checked' if !@album.live %>>
+  </p>
+
+  <input type="submit" value="Submit">
+<% end %>

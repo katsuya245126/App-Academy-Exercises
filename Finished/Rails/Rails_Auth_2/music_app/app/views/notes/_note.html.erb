@@ -1,0 +1,12 @@
+<section class="note-item">
+  <p><%= note.content %></p>
+
+  <div class="note-item-info">
+    <p>Authored by: <%= note.user.email %></p>
+
+    <% if note.user == current_user || current_user.admin? %>
+      <%= link_to 'Destroy note', note_url(note), method: :delete, class: 'button' %>
+    <% end %>
+  </div>
+
+</section>

@@ -1,0 +1,7 @@
+<section class="notification-container">
+  <ul>
+    <% flash[:notifications].each do |notification| %>
+      <li><%= notification %></li>
+    <% end %>
+  </ul>
+</section>

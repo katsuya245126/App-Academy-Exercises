@@ -1,0 +1,28 @@
+<h1 class="page-header"><%= @track.title %></h1>
+
+<% unless @track.lyrics.nil? %>
+  <%= ugly_lyrics(@track.lyrics) %>
+<% else %>
+  <p>No lyrics recorded</p>
+<% end %>
+
+
+<h2 class="sub-header">New note</h2>
+<%= render './notes/form' %>
+
+<h2 class="sub-header">Notes</h2>
+
+<% @track.notes.each do |note| %>
+  <%= render note %>
+<% end %>
+
+
+<h2 class="sub-header">Links</h2>
+
+<ul class="page-links">
+  <% if current_user.admin? %>
+    <li><a href="<%= edit_track_url(@track) %>" class="button">Edit track</a></li>
+    <li><%= link_to 'Destroy track', track_url(@track), class: 'button', method: :delete %></li>
+  <% end %>
+  <li><a href="<%= album_url(@track.album_id) %>" class="button"><%= @track.album.title %></a></li>
+</ul>

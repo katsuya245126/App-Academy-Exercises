@@ -1,0 +1,23 @@
+<h1 class="page-header">New user</h1>
+
+<a href="<%= new_session_url %>" class="button">Go to Sign-in!</a>
+
+<% if flash[:errors] %>
+  <%= render './errors/errors' %>
+<% end %>
+
+<form class="form" action="/users" method="post">
+  <%= auth_token %>
+
+  <p>
+    <label for="user_email">Email</label>
+    <input type="text" name="user[email]" id="user_email">
+  </p>
+
+  <p>
+    <label for="user_password">Password</label>
+    <input type="password" name="user[password]" id="user_password">
+  </p>
+
+  <input type="submit" value="Sign up">
+</form>

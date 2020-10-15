@@ -1,0 +1,114 @@
+body {
+  background-color: #111;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-body {
+  width: 800px;
+  min-height: 100vh;
+  background-color: #343030;
+  margin: auto;
+  padding: 30px;
+  border: solid grey;
+  border-width: 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+p, a, input {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+.main-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.main-list li {
+  background-color: #FDDB61;
+  height: 100px;
+  width: calc(33% - 40px);
+  margin: 0 20px 20px 0;
+  border-radius: 10px;
+}
+
+.main-list li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.main-list li a p {
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  color: black;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.form p label, .form p input {
+  display: block;
+}
+
+.form p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form input[type="submit"] {
+  align-self: flex-end;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: skyblue;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.sub-header {
+  font-size: 25px;
+  color: coral;
+  margin: 20px 0;
+}
+
+.page-links {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.lyrics {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+.note-item {
+  width: 400px;
+}
+
+.note-item p {
+  overflow-wrap: break-word;
+  margin-bottom: 20px;
+}
+
+.note-item-info {
+  display: flex;
+  justify-content: space-between;
+}

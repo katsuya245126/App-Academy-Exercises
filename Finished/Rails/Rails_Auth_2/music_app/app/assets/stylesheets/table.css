@@ -1,0 +1,38 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background-color: #dddddd;
+  color: black;
+}
+
+thead th {
+  border-right: 1px solid #343030;
+}
+
+thead th:last-child {
+  border-right: 1px solid white;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th .button {
+  margin-bottom: 0px;
+  margin: auto;
+  width: 50%;
+}
+
+table {
+  border: 1px solid white;
+}
+
+.table-options {
+  display: flex;
+}

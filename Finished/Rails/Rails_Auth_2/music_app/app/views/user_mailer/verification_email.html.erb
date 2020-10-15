@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Music App, <%= @user.email %>!</h1>
+    <p>
+      You have successfully signed up to musicapp.com,
+      your username/email is: <%= @user.email %>.<br />
+    </p>
+    <p>
+      To login to the site, just follow this link: <a href="http://localhost:3000<%= @url %>">http://localhost:3000<%= @url %></a>
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>

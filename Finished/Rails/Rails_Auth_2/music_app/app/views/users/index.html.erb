@@ -1,0 +1,27 @@
+<h1 class="page-header">User index</h1>
+
+<table>
+  <thead>
+    <th>email</th>
+    <th>role</th>
+    <th>verfied</th>
+    <th>options</th>
+  </thead>
+
+  
+  <% @users.each do |user| %>
+    <tr>
+      <th width="50%"><%= user.email %></th>
+      <th width="10%"><%= user.admin? ? 'admin' : 'user' %></th>
+      <th width="5%"><%= user.activated? ? "&#10003;".html_safe : "&#10005;".html_safe %></th>
+      <th width="25%">
+        
+        <% unless user.admin? %>
+          <%= link_to 'make admin', admin_user_url(user.id), class: 'button' %>
+        <% end %>
+        
+      </th>
+    </tr>
+  <% end %>
+  
+</table>

@@ -1,0 +1,10 @@
+<%= form_with model: @note, class: 'form', url: notes_url do |f| %>
+  <%= auth_token %>
+  <input type="hidden" name="note[track_id]" value="<%= @track.id %>">
+  <p>
+    <label for="note-content">Content</label>
+    <textarea name="note[content]" id="note-content" cols="30" rows="10"></textarea>
+  </p>
+
+  <input type="submit" value="Submit">
+<% end %>

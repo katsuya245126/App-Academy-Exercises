@@ -1,0 +1,25 @@
+<h1 class="page-header">Log in</h1>
+
+<% if flash[:errors] %>
+  <%= render './errors/errors' %>
+<% elsif flash[:notifications] %>
+  <%= render './notifications/notifications' %>
+<% end %>
+
+<a href="<%= new_user_url %>" class="button">Go to Sign-up!</a>
+
+<form class="form" action="/session" method="post">
+  <%= auth_token %>
+
+  <p>
+    <label for="user_email">Email</label>
+    <input type="text" name="user[email]" id="user_email">
+  </p>
+
+  <p>
+    <label for="user_password">Password</label>
+    <input type="password" name="user[password]" id="user_password">
+  </p>
+
+  <input type="submit" value="Log in">
+</form>

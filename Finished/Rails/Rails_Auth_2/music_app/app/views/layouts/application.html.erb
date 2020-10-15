@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <main class="main-body">
+      <header class="header">
+        <h1 class="logo">Music App</h1>
+      </header>
+
+      
+      <% if logged_in? %>
+        <nav>
+          <section class="nav-links">
+            <a class="button" href=<%= root_url %>>Take me Home</a>
+            
+            <% if current_user.admin? %>
+              <a href="<%= users_url %>" class="button">Users</a>
+            <% end %>
+          </section>
+
+          <div class="user-detail">
+            <p>Logged in as: <%= current_user.email %></p>
+            <form action="/session" method="post">
+              <input type="hidden" name="_method" value="delete">
+              <%= auth_token %>
+
+              <input type="submit" value="Sign Out">
+            </form>
+          </div>
+        </nav>
+      <% end %>
+      
+
+      <%= yield %>
+    </main>
+  </body>
+</html>
