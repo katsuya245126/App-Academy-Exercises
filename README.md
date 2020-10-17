@@ -45,3 +45,5 @@
 * [Rails Auth 2](Finished/Rails/Rails_Auth_2)
 	* [Helpers, Layouts, and Partials](Finished/Rails/Rails_Auth_2/helpers_layouts_and_partials)
 	* [Music App](Finished/Rails/Rails_Auth_2/music_app)
+* [Testing with Rails](Finished/Rails/Testing_with_Rails)
+	* [Capybara] (Finished/Rails/Rails_Auth_2/music_app/spec)
